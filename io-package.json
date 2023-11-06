@@ -1,0 +1,110 @@
+{
+	"common": {
+		"name": "nibe-myuplink",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"uk": "Початкова версія",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "NIBE myUplink",
+		"titleLang": {
+			"en": "NIBE myUplink",
+			"de": "NIBE myUplink",
+			"ru": "NIBE myUplink",
+			"pt": "NIBE meuUplink",
+			"nl": "NIBE myUplink",
+			"fr": "NIBE myUplink",
+			"it": "NIBE myUplink",
+			"es": "NIBE mi enlace ascendente",
+			"pl": "NIBE myUplink",
+			"uk": "NIBE myUplink",
+			"zh-cn": "NIBE myUplink"
+		},
+		"desc": {
+			"en": "Access Heatpump data via NIBE myUplink API",
+			"de": "Greifen Sie über die NIBE myUplink API auf Wärmepumpendaten zu",
+			"ru": "Доступ к данным теплового насоса через API NIBE myUplink",
+			"pt": "Acesse dados do Heatpump via API NIBE myUplink",
+			"nl": "Toegang tot warmtepompgegevens via NIBE myUplink API",
+			"fr": "Accédez aux données de la pompe à chaleur via l'API NIBE myUplink",
+			"it": "Accedi ai dati della pompa di calore tramite NIBE myUplink API",
+			"es": "Acceda a los datos de la bomba de calor a través de la API NIBE myUplink",
+			"pl": "Uzyskaj dostęp do danych pompy ciepła za pośrednictwem interfejsu API NIBE myUplink",
+			"uk": "Отримайте доступ до даних теплового насоса через NIBE myUplink API",
+			"zh-cn": "通过 NIBE myUplink API 访问热泵数据"
+		},
+		"authors": [
+			"Arne <github@status3.it>"
+		],
+		"keywords": [
+			"NIBE",
+			"myuplink"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "nibe-myuplink.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/ahk97/ioBroker.nibe-myuplink/main/admin/nibe-myuplink.png",
+		"readme": "https://github.com/ahk97/ioBroker.nibe-myuplink/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "climate-control",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "json"
+		},
+		"supportCustoms": true,
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.1.13"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
